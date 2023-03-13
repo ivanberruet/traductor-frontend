@@ -4,7 +4,6 @@ import AddModal from "./components/AddModal";
 import EditModal from "./components/EditModal";
 import sortTable from "./utils/sortTable";
 
-const URI = "https://traductor-angie-api.onrender.com/" 
 
 function App() {
 	//==== CONSTANTS
@@ -19,9 +18,7 @@ function App() {
 	//==== GET ALL WORDS
 	 async function getWords() {
 	 	try {		
-			console.log("tryng:",URI+"getWords");	
-	 		const res = await axios.get(URI+"getWords")
-			console.log("res:",res);
+	 		const res = await axios.get(process.env.REACT_APP_URI+"getWords")
 	 		setWords(res.data)
 	 	} catch (error) {
 	 		console.log({message: error.message})
