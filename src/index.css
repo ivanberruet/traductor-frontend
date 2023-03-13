@@ -1,13 +1,166 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+:root{
+	--table-bg: #cfe2ff
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  position: relative;
+  min-height: 100vh;
+}
+#root{
+	width: 100%;
+	height: 100vh;
+}
+.hidden{display: none !important;}
+.action_btn{
+	font-weight: inherit;
+	background-color: transparent;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.App{
+	height: 100%;
+	padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	min-width: 320px;
+}
+.addSection{
+	display: flex;
+	align-items: end;
+	gap: 1rem;
+	padding: 1rem 0;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+thead tr{
+	background-color: var(--table-bg);
+	text-align: left;
+}
+
+th,td{
+	height: 50px;
+	padding: 0 .5rem;
+}
+
+
+
+
+.es_value, .italianValue{
+	width: 370px;
+}
+.action_btn{
+	cursor: pointer;
+}
+input{
+	border: none;
+}
+input:focus-visible{
+	outline: none;
+}
+
+#addInput{
+	border-bottom: 1px solid black;
+}
+.actions_td{
+	display: flex;
+	gap: 1rem;
+}
+
+
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 0.4rem;
+  width: 450px;
+  padding: 1.3rem;
+  min-height: 250px;
+  position: absolute;
+  top: 20%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+	z-index: 2;
+}
+
+.modal .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal input {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.modal p {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0.4rem 0 0.2rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  font-weight: 700;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.btn-close {
+  transform: translate(10px, -20px);
+  padding: 0.5rem 0.7rem;
+  background: #eee;
+  border-radius: 50%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.modal_inputs{
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
 }
