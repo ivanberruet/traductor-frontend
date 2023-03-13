@@ -17,7 +17,7 @@ function App() {
 	//==== GET ALL WORDS
 	 async function getWords() {
 	 	try {			
-	 		const res = await axios.get(process.env.REACT_APP_URI+"getWords")
+	 		const res = await axios.get(process.env.REACT_APP_URI+"/getWords")
 	 		setWords(res.data)
 	 	} catch (error) {
 	 		console.log({message: error.message})
@@ -32,7 +32,7 @@ function App() {
 	//==== DELETE REGISTER
 	const deleteRecord = async (id) => {
 		try {			
-			const res = await axios.delete(process.env.REACT_APP_URI+"delete/"+id)
+			const res = await axios.delete(process.env.REACT_APP_URI+"/delete/"+id)
 			console.log(res)
 			getWords()
 		} catch (error) {

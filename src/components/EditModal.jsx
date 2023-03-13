@@ -18,7 +18,7 @@ export default function EditModal(props) {
 	//API call
 	async function editWord (id,spanishValue,italianValue){
 		try {			
-			const res = await axios.put(process.env.REACT_APP_URI+"edit/"+id,{
+			const res = await axios.put(process.env.REACT_APP_URI+"/edit/"+id,{
 				spanishValue: spanishValue,
 				italianValue: italianValue,
 			})
