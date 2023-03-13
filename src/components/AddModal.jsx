@@ -28,7 +28,7 @@ export default function AddModal(props) {
 	//API call
 	async function addNewWord (spanishValue,italianValue){
 		try {
-			const res = await axios.post(process.env.REACT_APP_URI+"/addWord",{
+			const res = await axios.post(process.env.REACT_APP_URI+"addWord",{
 				spanishValue: spanishValue.toUpperCase(),
 				italianValue: italianValue.toUpperCase(),
 			})				
